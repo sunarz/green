@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 117rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 5rem;
+    margin: 1.6rem 5rem;
+}
+
+nav {
+    width: 100%;
+    background-color: #82b186c0;
+    opacity: 0.9;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navbar-item {
+    padding: 0 1rem;
+    margin-left: 5rem;
+}
+
+.navbar-link {
+    color: #ffffffad;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}  
+
+.navbar-link:hover {
+    color: #bd9b36;
+    transition: 1s;
+
+}
+
+
+header {
+    height: 90vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(83, 161, 151, 0.5),
+        rgba(96, 175, 89, 0.8)),
+    url(/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+}
+
+.header-text {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header-text-main {
+    display: flex;
+    font-size: 4.6rem;
+    letter-spacing: 1rem;
+    margin: 1rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+
+}
+
+.header-text-sub {
+    display: flex;
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 4rem;
+}
+
+@keyframes moveInLeft{
+    
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+ 
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+
+@keyframes moveInRight{
+    
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+ 
+    80%{
+        transform: translateX(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #777;
+    background-color: #fff;
+    padding: 1.6rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .3s;
+    font-size: 1.4rem;
+
+}
+
+.btn:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+}
